@@ -1,8 +1,7 @@
 'use client'
-
 interface InputProps {
 	id: string
-	onChange: () => void
+	onChange: (e: any) => void
 	value: string
 	label: string
 	type?: 'text' | 'password' | 'email'

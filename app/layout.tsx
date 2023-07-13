@@ -1,6 +1,7 @@
 import AuthProvider from '@/context/AuthProvider'
 import './globals.css'
 import type { Metadata } from 'next'
+import ToastProvider from '@/context/ToastProvider'
 
 export const metadata: Metadata = {
 	title: 'Netflix Clone',
@@ -14,7 +15,10 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body>
-				<AuthProvider>{children}</AuthProvider>
+				<AuthProvider>
+					<ToastProvider />
+					{children}
+				</AuthProvider>
 			</body>
 		</html>
 	)
